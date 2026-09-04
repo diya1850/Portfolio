@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diya Fathima O | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Diya Fathima O - AI & Data Science Graduate, Digital Marketer, and Creative Tech Enthusiast.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark-mode">
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <span class="loader-logo">DFO</span>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Effects -->
+    <div class="bg-gradient-blob blob-1"></div>
+    <div class="bg-gradient-blob blob-2"></div>
+    <div class="particles-container" id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Diya<span>.</span></a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#marketing" class="nav-link">Marketing</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions-wrapper">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#marketing" class="nav-link">Marketing</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <canvas id="hero-neuro-canvas" class="neuro-canvas"></canvas>
+            <div class="hero-content reveal-text">
+                <p class="tagline"><i class="fas fa-sparkles"></i> Blending Tech, Data & Words</p>
+                <h1 class="hero-title letters-reveal">Hi, I'm <span class="gradient-text">Diya Fathima O</span></h1>
+                <h2 class="hero-subtitle">GTM Engineer @ SuperHippo | AI & Data Science Graduate</h2>
+                <p class="hero-desc">
+                    Passionate about Digital Marketing, AI, Performance Marketing, and Data Analytics. I build impactful
+                    digital experiences by combining creativity, technology, and insights.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Explore Portfolio</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    <div class="resume-dropdown">
+                        <button class="btn btn-outline dropdown-toggle" id="resume-toggle-btn">
+                            <i class="fas fa-download"></i> Download Resume <i
+                                class="fas fa-chevron-down chevron-icon"></i>
+                        </button>
+                        <div class="resume-menu glass-card">
+                            <a href="diya_fathima_gtm_resume.pdf" class="resume-item" id="download-gtm"
+                                download="Diya_Fathima_GTM_Resume.pdf">
+                                <span class="resume-icon"><i class="fas fa-bullhorn"></i></span>
+                                <div class="resume-info">
+                                    <span class="resume-title">GTM & Growth Resume</span>
+                                    <span class="resume-subtitle">Meta Ads, SEO & Automation Focus</span>
+                                </div>
+                                <span class="download-progress-bar"></span>
+                            </a>
+                            <a href="diya_fathima_data_analyst_resume.pdf" class="resume-item" id="download-da"
+                                download="Diya_Fathima_Data_Analyst_Resume.pdf">
+                                <span class="resume-icon"><i class="fas fa-chart-pie"></i></span>
+                                <div class="resume-info">
+                                    <span class="resume-title">Data Analyst Resume</span>
+                                    <span class="resume-subtitle">Power BI, Python & SQL Focus</span>
+                                </div>
+                                <span class="download-progress-bar"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="avatar-container holographic-reveal">
+                    <div class="avatar-glow"></div>
+                    <div class="glitch-avatar-wrapper">
+                        <img src="avatar.png" alt="Diya Fathima O" class="avatar-img glitch-img" />
+                        <div class="glitch-overlay layer-1" style="background-image: url('avatar.png');"></div>
+                        <div class="glitch-overlay layer-2" style="background-image: url('avatar.png');"></div>
+                    </div>
+                    <div class="satellite-orbit-container">
+                        <div class="satellite-tag tag-1"><i class="fas fa-chart-line"></i> Data</div>
+                        <div class="satellite-tag tag-2"><i class="fas fa-bullhorn"></i> Marketing</div>
+                        <div class="satellite-tag tag-3"><i class="fas fa-robot"></i> AI</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="section-header reveal-text">
+                <h2 class="section-title letters-reveal">About <span class="gradient-text">Me</span></h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="about-container glass-card reveal">
+                <div class="about-visual">
+                    <div class="about-photo-wrapper bobbing-element">
+                        <div class="neon-orbit-circle"></div>
+                        <div class="orbit-particle-emitter"></div>
+                        <img src="avatar.png" alt="Diya Fathima O" class="about-img" />
+                    </div>
+                </div>
+                <div class="about-content-wrapper">
+                    <div class="about-text">
+                        <p>
+                            I am passionate about combining creativity, technology, and analytics to build impactful
+                            digital
+                            experiences. I enjoy working with Meta Ads, SEO, campaign strategy, Power BI, Python, AI
+                            tools,
+                            and data storytelling.
+                        </p>
+                        <p>
+                            As a curious learner and creative thinker, I believe in learning by doing. My journey
+                            bridges
+                            the gap between raw data and compelling narratives, ensuring that every insight leads to
+                            meaningful action.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="5">0</h3>
+                            <p>Leadership Roles</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="4">0</h3>
+                            <p>Internships</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="10">0</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="6">0</h3>
+                            <p>Certifications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="experience section-padding">
+            <div class="section-header reveal-text">
+                <h2 class="section-title letters-reveal">Experience <span class="gradient-text">Timeline</span></h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="timeline">
+                <!-- Timeline Item -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>GTM Engineer</h3>
+                        <h4>SuperHippo (Internship)</h4>
+                        <p class="timeline-date">May 2026 - Present · 3 mos</p>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Punjab, India · On-site</p>
+                        <ul class="timeline-bullets">
+                            <li>Driving GTM (Go-to-Market) initiatives for SuperHippo.ai, an AI-powered customer
+                                engagement platform by Jungleworks.</li>
+                            <li>Running and optimizing Meta Ads campaigns to generate qualified B2B leads across
+                                multiple industries.</li>
+                            <li>Achieved a 156.61% marketing ROI through Meta Ads, generating $1,996 in new ARR from 2
+                                customer acquisitions.</li>
+                            <li>Generated a high-intent lead through Meta Ads, contributing to a $1,360 SaaS deal. </li>
+                            <li>Recognised with the Quarterly R&R Award for Best LinkedIn Content within 2 months of
+                                joining the company. </li>
+                            <li>Achieved a Google Search Impact score of 200 through SEO optimisation and content
+                                strategy. </li>
+                            <li>Planned and executed ICP-based GTM campaigns targeting enterprise decision-makers across
+                                multiple industries. </li>
+                            <li>Managed 5+ B2B Meta Ads campaigns to generate qualified leads and support pipeline
+                                growth. </li>
+                            <li>Built and enriched a database of 200+ qualified B2B prospects using AI-powered
+                                prospecting tools. </li>
+                            <li>Executed on-page and off-page SEO, including G2 product listing and high-authority
+                                backlink building. </li>
+                            <li>Published SEO-optimized blogs and managed Google Search Console to improve search
+                                visibility and indexing. </li>
+                            <li>Created marketing assets, email sequences, and landing pages for AI Voice Agents,
+                                WhatsApp Automation, and Omnichannel solutions. </li>
+                            <li>Designed n8n automation workflows for AI-powered content generation and scheduled
+                                publishing.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>CEO</h3>
+                        <h4>IEDC MESCE</h4>
+                        <p class="timeline-date">Past</p>
+                        <ul class="timeline-bullets">
+                            <li>Led a team of 50+ members and managed innovation, entrepreneurship, and startup-focused
+                                initiatives across campus.</li>
+                            <li>Coordinated and executed 15+ technical and entrepreneurial events engaging more than 500
+                                students.</li>
+                            <li>Developed branding, promotional, and outreach campaigns that increased student
+                                participation and ecosystem visibility.</li>
+                            <li>Collaborated with industry experts, startup founders, and institutional stakeholders to
+                                strengthen entrepreneurship programs.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Assistant Marketing Officer</h3>
+                        <h4>IEDC MESCE</h4>
+                        <p class="timeline-date">Past</p>
+                        <ul class="timeline-bullets">
+                            <li>As the Assistant Marketing Officer at IEDC MESCE, I got to dive deep into
+                                marketing—handling social media, managing outreach, and making sure our events reached
+                                the right audience. From crafting strategies to engaging people, this role truly helped
+                                me level up my marketing skills and confidence in public speaking.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Marketing Intern</h3>
+                        <h4>BOEHM TECH</h4>
+                        <p class="timeline-date">Past</p>
+                        <ul class="timeline-bullets">
+                            <li>Conducted market research and competitor analysis to identify customer trends and growth
+                                opportunities.</li>
+                            <li>Supported content marketing initiatives aligned with business objectives and customer
+                                acquisition goals.</li>
+                            <li>Assisted in campaign planning and audience engagement activities to improve marketing
+                                effectiveness.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Business Development Intern</h3>
+                        <h4>MakeMyPass</h4>
+                        <p class="timeline-date">Past</p>
+                        <ul class="timeline-bullets">
+                            <li>Identified prospective business opportunities and supported lead generation initiatives.
+                            </li>
+                            <li>Assisted partnership development activities through strategic outreach and
+                                relationship-building efforts.</li>
+                            <li>Conducted competitor research and market analysis to support customer acquisition
+                                strategies.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Data Analyst Intern</h3>
+                        <h4>OutriX</h4>
+                        <p class="timeline-date">Past</p>
+                        <ul class="timeline-bullets">
+                            <li>Cleaned and processed datasets, identified data quality issues, and ensured data
+                                integrity for analysis.</li>
+                            <li>Performed data analysis using Python and relevant libraries to extract meaningful
+                                insights and trends.</li>
+                            <li>Created visualizations and reports to communicate findings effectively to stakeholders.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Power BI Intern</h3>
+                        <h4>Cognifyz Technologies</h4>
+                        <p class="timeline-date">Past</p>
+                        <ul class="timeline-bullets">
+                            <li>Learned to create interactive dashboards and reports using Power BI to visualize data
+                                and business insights.</li>
+                            <li>Gained practical experience in data modeling, DAX calculations, and implementing data
+                                analysis best practices.</li>
+                            <li>Developed skills in data storytelling and presenting findings to stakeholders through
+                                effective data visualization.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>CV Consultant</h3>
+                        <h4>Zeak US</h4>
+                        <p class="timeline-date">Past</p>
+                        <ul class="timeline-bullets">
+                            <li>Created ATS-optimized resumes and LinkedIn profiles using strategic keyword integration
+                                and role-specific customization.</li>
+                            <li>Enhanced client profile visibility and recruiter engagement through structured content
+                                optimization.</li>
+                            <li>Delivered personalized career branding consultations while maintaining high-quality
+                                documentation standards.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section-padding">
+            <canvas id="skills-neuro-canvas" class="neuro-canvas"></canvas>
+            <div class="section-header reveal-text">
+                <h2 class="section-title letters-reveal">Core <span class="gradient-text">Skills</span></h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Digital Marketing</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon"><i class="fab fa-facebook"></i></div>
+                    <h3>Meta Ads</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon"><i class="fas fa-search"></i></div>
+                    <h3>SEO</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon"><i class="fas fa-tasks"></i></div>
+                    <h3>Campaign Management</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI Tools</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>Data Analytics</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Power BI</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <h3>Python</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
+                    <h3>Excel</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon"><i class="fas fa-pen-nib"></i></div>
+                    <h3>Content Creation</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Communication</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-icon"><i class="fas fa-users"></i></div>
+                    <h3>Audience Targeting</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership & Activities Section -->
+        <section id="leadership" class="leadership section-padding">
+            <div class="section-header reveal-text">
+                <h2 class="section-title letters-reveal">Leadership &amp; <span class="gradient-text">Activities</span>
+                </h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="leadership-grid">
+                <div class="leader-card glass-card reveal">
+                    <div class="leader-icon"><i class="fas fa-crown"></i></div>
+                    <h3>CEO</h3>
+                    <p>IEDC MESCE</p>
+                </div>
+                <div class="leader-card glass-card reveal">
+                    <div class="leader-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Joint Secretary</h3>
+                    <p>NSS Unit 191</p>
+                </div>
+                <div class="leader-card glass-card reveal">
+                    <div class="leader-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Vice Chairperson</h3>
+                    <p>IEEE IAS SBC</p>
+                </div>
+                <div class="leader-card glass-card reveal">
+                    <div class="leader-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Team Member</h3>
+                    <p>IEDC NEST</p>
+                </div>
+                <div class="leader-card glass-card reveal">
+                    <div class="leader-icon"><i class="fas fa-edit"></i></div>
+                    <h3>Content Lead</h3>
+                    <p>ADTEC-MESCE</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section id="projects" class="projects section-padding">
+            <div class="section-header reveal-text">
+                <h2 class="section-title letters-reveal">Featured <span class="gradient-text">Projects</span></h2>
+                <div class="title-line"></div>
+                <p class="section-subtitle">
+                    A collection of AI, automation, analytics, and dashboard projects that showcase my technical and
+                    problem-solving skills.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card glass-card reveal">
+                    <div class="project-image" style="background-image: url('Vocalive.jpeg');">
+                        <div class="project-type-badge">
+                            <i class="fas fa-microphone"></i> AI Project
+                        </div>
+
+                        <div class="project-overlay">
+                            <a href="https://github.com/diya1850/Vocalive" class="btn-icon">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Vocalive – AI Powered Spoken English Tutor</h3>
+
+                        <p>
+                            AI-powered spoken English learning platform featuring adaptive learning,
+                            real-time pronunciation feedback, IELTS speaking practice,
+                            progress tracking, and personalized AI tutoring.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span class="badge">React.js</span>
+                            <span class="badge">CSS</span>
+                            <span class="badge">AI</span>
+                            <span class="badge">Voice Tech</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card reveal">
+                    <div class="project-image" style="background-image: url('whatsapp.jpeg');">
+                        <div class="project-type-badge">
+                            <i class="fab fa-whatsapp"></i> Automation
+                        </div>
+
+                        <div class="project-overlay">
+                            <a href="https://github.com/diya1850" target="_blank" rel="noopener" class="btn-icon">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>WhatsApp Automation for Businesses Using AI</h3>
+
+                        <p>
+                            Developed an AI-driven WhatsApp automation solution that handles customer
+                            inquiries, delivers instant responses, improves engagement,
+                            and provides 24/7 business communication support.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span class="badge">AI</span>
+                            <span class="badge">API Integration</span>
+                            <span class="badge">Automation</span>
+                            <span class="badge">Prompt Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card reveal">
+                    <div class="project-image" style="background-image: url('HR Dashboard.jpeg');">
+                        <div class="project-type-badge">
+                            <i class="fas fa-chart-bar"></i> Analytics
+                        </div>
+
+                        <div class="project-overlay">
+                            <a href="https://github.com/diya1850/HR-Analytics-Dashboard" class="btn-icon">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>HR Analytics Dashboard</h3>
+
+                        <p>
+                            Built an interactive Power BI dashboard to analyze employee attrition,
+                            workforce distribution, and performance trends with dynamic filters
+                            and insightful visualizations.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span class="badge">Power BI</span>
+                            <span class="badge">Data Analysis</span>
+                            <span class="badge">Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card glass-card reveal">
+                    <div class="project-image" style="background-image: url('Netflix Dashboard.jpeg');">
+                        <div class="project-type-badge">
+                            <i class="fas fa-film"></i> Tableau Dashboard
+                        </div>
+
+                        <div class="project-overlay">
+                            <a href="https://github.com/diya1850" target="_blank" rel="noopener" class="btn-icon">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Netflix Dashboard Using Tableau</h3>
+
+                        <p>
+                            Interactive Tableau dashboard visualizing Netflix content growth,
+                            ratings distribution, top genres, country-wise production,
+                            and movie vs TV show comparisons.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span class="badge">Tableau</span>
+                            <span class="badge">Analytics</span>
+                            <span class="badge">Visualization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card glass-card reveal">
+                    <div class="project-image" style="background-image: url('Spotify.jpeg');">
+                        <div class="project-type-badge">
+                            <i class="fab fa-spotify"></i> Power BI Dashboard
+                        </div>
+
+                        <div class="project-overlay">
+                            <a href="https://github.com/diya1850" target="_blank" rel="noopener" class="btn-icon">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Spotify Data Analysis Dashboard</h3>
+
+                        <p>
+                            Created a Power BI dashboard highlighting total streams,
+                            top artists, most streamed songs, playlists, and key
+                            Spotify performance metrics.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span class="badge">Power BI</span>
+                            <span class="badge">Data Cleaning</span>
+                            <span class="badge">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card glass-card reveal">
+                    <div class="project-image" style="background-image: url('n8n.jpeg');">
+                        <div class="project-type-badge">
+                            <i class="fas fa-cloud-sun"></i> Automation
+                        </div>
+
+                        <div class="project-overlay">
+                            <a href="https://github.com/diya1850/n8n-weather-telegram-bot" class="btn-icon">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Automated Weather Notification Bot</h3>
+
+                        <p>
+                            Built using n8n, OpenWeatherMap API, and Telegram Bot API to
+                            automatically fetch weather data and deliver daily scheduled
+                            notifications directly to Telegram.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span class="badge">n8n</span>
+                            <span class="badge">Workflow Automation</span>
+                            <span class="badge">Telegram Bot API</span>
+                            <span class="badge">OpenWeatherMap API</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Marketing Work Section -->
+        <section id="marketing" class="marketing section-padding">
+            <div class="section-header reveal-text">
+                <h2 class="section-title letters-reveal">Marketing <span class="gradient-text">Work</span></h2>
+                <div class="title-line"></div>
+                <p class="section-subtitle">Real campaigns, real impact — a showcase of marketing projects I led and
+                    contributed to.</p>
+            </div>
+            <div class="marketing-grid">
+                <!-- Marketing Card: Google AI Mode -->
+                <div class="mkt-card glass-card reveal">
+                    <div class="mkt-image" style="background-image: url('google_ai_mode.png');">
+                        <div class="mkt-type-badge">
+                            <i class="fas fa-robot"></i> AEO & AI Search
+                        </div>
+
+                        <div class="mkt-overlay">
+                            <a href="https://lnkd.in/gbqyjGqf" target="_blank" rel="noopener" class="btn-icon"
+                                title="View on LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mkt-info">
+                        <h3>SuperHippo Featured in Google AI Mode</h3>
+
+                        <p>
+                            An AEO experiment that revealed SuperHippo being cited by Google AI Mode
+                            for a non-branded search around companies with the best customer retention,
+                            highlighting how AI Search is changing the way brands get discovered.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span class="badge">AEO</span>
+                            <span class="badge">AI Search</span>
+                            <span class="badge">Content Strategy</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Marketing Card 1: Content Creation -->
+                <div class="mkt-card glass-card reveal">
+                    <div class="mkt-image" style="background-image: url('real_cabin_tour.png');">
+                        <div class="mkt-type-badge"><i class="fas fa-video"></i> Content Creation</div>
+                        <div class="mkt-overlay">
+                            <a href="https://youtu.be/1M6G9hm2bE4?si=R1SKH4bzt0OOxrFo" target="_blank" rel="noopener"
+                                class="btn-icon" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="mkt-info">
+                        <h3>IEDC MESCE Cabin Tour</h3>
+                        <p>An engaging Instagram reel designed to introduce students to IEDC, showcasing the cabin and
+                            its key resources to boost awareness and enthusiasm.</p>
+                        <div class="tech-stack">
+                            <span class="badge">Video Production</span>
+                            <span class="badge">Instagram Reels</span>
+                            <span class="badge">Student Outreach</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Marketing Card 2: LinkedIn Content Creator Recognition -->
+                <div class="mkt-card glass-card reveal">
+                    <div class="mkt-image" style="background-image: url('real_linkedin_content.jpg');">
+                        <div class="mkt-type-badge">
+                            <i class="fab fa-linkedin"></i> Content Creation
+                        </div>
+                        <div class="mkt-overlay">
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7852337953826424832/"
+                                target="_blank" rel="noopener" class="btn-icon" title="View on LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mkt-info">
+                        <h3>Best LinkedIn Content Creator - JungleWorks</h3>
+                        <p>
+                            A proud milestone after just two months as a GTM Intern at JungleWorks,
+                            earning a company-wide nomination for Best LinkedIn Content Creator.
+                            The recognition reflected consistent content creation, sharing learnings,
+                            and creating value through LinkedIn.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span class="badge">LinkedIn Content</span>
+                            <span class="badge">Personal Branding</span>
+                            <span class="badge">GTM Marketing</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Marketing Card 2: Campaign -->
+                <div class="mkt-card glass-card reveal">
+                    <div class="mkt-image" style="background-image: url('real_shevote.png');">
+                        <div class="mkt-type-badge"><i class="fas fa-bullhorn"></i> Campaign</div>
+                        <div class="mkt-overlay">
+                            <a href="https://www.instagram.com/reel/DGs5y4SSFwj/" target="_blank" rel="noopener"
+                                class="btn-icon" title="View on Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="mkt-info">
+                        <h3>SHEVOTE – Your Vote, Your Future</h3>
+                        <p>Featured as the face of this women's empowerment voting campaign. Delivered a powerful
+                            message encouraging women's civic participation with the tagline <em>"Your Vote, Your Power.
+                                Your Choice, Your Future."</em></p>
+                        <div class="tech-stack">
+                            <span class="badge">Campaign Strategy</span>
+                            <span class="badge">Brand Messaging</span>
+                            <span class="badge">Empowerment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marketing Card 3: Social Media Growth -->
+                <div class="mkt-card glass-card reveal">
+                    <div class="mkt-image" style="background-image: url('real_follower_growth.jpg');">
+                        <div class="mkt-type-badge"><i class="fas fa-chart-line"></i> Social Media Growth</div>
+                        <div class="mkt-overlay">
+                            <span class="btn-icon stat-highlight" title="363 → 598 followers"><i
+                                    class="fas fa-arrow-trend-up"></i></span>
+                        </div>
+                    </div>
+                    <div class="mkt-info">
+                        <h3>IEDC MESCE Follower Growth</h3>
+                        <p>As Assistant Marketing Officer, I conducted a session on <em>"What is IEDC & how it benefits
+                                students"</em> — growing the channel from <strong>363 to 598 followers</strong>, a
+                            <strong>64% growth</strong> in engagement and awareness.
+                        </p>
+                        <div class="mkt-stat-row">
+                            <div class="mkt-stat"><span class="mkt-stat-num counter-scroll"
+                                    data-target="363">0</span><span class="mkt-stat-label">Before</span></div>
+                            <div class="mkt-stat-arrow"><i class="fas fa-arrow-right"></i></div>
+                            <div class="mkt-stat"><span class="mkt-stat-num accent counter-scroll"
+                                    data-target="598">0</span><span class="mkt-stat-label">After</span></div>
+                            <div class="mkt-stat"><span class="mkt-stat-num accent">+<span class="counter-scroll"
+                                        data-target="64">0</span>%</span><span class="mkt-stat-label">Growth</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marketing Card 4: Social Awareness -->
+                <div class="mkt-card glass-card reveal">
+                    <div class="mkt-image" style="background-image: url('real_election_awareness.jpg');">
+                        <div class="mkt-type-badge"><i class="fas fa-landmark"></i> Social Awareness</div>
+                        <div class="mkt-overlay">
+                            <a href="https://www.instagram.com/reel/C6JmjjuJlel/" target="_blank" rel="noopener"
+                                class="btn-icon" title="View on Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="mkt-info">
+                        <h3>Election Awareness – Voting Process Guide</h3>
+                        <p>Created an informative awareness video under NSS Unit 191, MESCE to guide voters — especially
+                            first-timers — through the polling process, encouraging confidence and democratic
+                            responsibility.</p>
+                        <div class="tech-stack">
+                            <span class="badge">NSS</span>
+                            <span class="badge">Social Awareness</span>
+                            <span class="badge">Video Production</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marketing Card 5: Brand Promotion -->
+                <div class="mkt-card glass-card reveal">
+                    <div class="mkt-image" style="background-image: url('real_brand_promo.png');">
+                        <div class="mkt-type-badge"><i class="fas fa-star"></i> Brand Promotion</div>
+                        <div class="mkt-overlay">
+                            <a href="https://www.linkedin.com/in/diya-fathima-a54348248/" target="_blank" rel="noopener"
+                                class="btn-icon" title="View on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="mkt-info">
+                        <h3>Sponsor Brand Promotion – IEDC Event</h3>
+                        <p>Took the stage in front of <strong>~250 students</strong> to introduce and promote a sponsor
+                            brand at an IEDC MESCE event. Built a strong bridge between the sponsor and student
+                            community, driving brand visibility and real-time engagement.</p>
+                        <div class="tech-stack">
+                            <span class="badge">Stage Presentation</span>
+                            <span class="badge">Brand Activation</span>
+                            <span class="badge">Event Marketing</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Academic Achievements Section -->
+        <section id="achievements" class="achievements section-padding">
+            <div class="section-header reveal-text">
+                <h2 class="section-title letters-reveal">Academic <span class="gradient-text">Achievements</span></h2>
+                <div class="title-line"></div>
+                <p class="section-subtitle">Ranked among top performers in KTU examinations for 5 consecutive semesters
+                    at MES College of Engineering.</p>
+            </div>
+            <div class="achievements-grid">
+
+                <div class="achieve-card glass-card reveal">
+                    <div class="achieve-poster">
+                        <img src="real_ktu_s4.jpg" alt="KTU S4 Top Performers - Diya Fathima O">
+                        <div class="achieve-poster-overlay">
+                            <div class="sgpa-display"><span class="counter-scroll" data-target="8.32">0.00</span>
+                                <span>SGPA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achieve-header">
+                        <div class="achieve-badge"><i class="fas fa-trophy"></i></div>
+                        <div class="achieve-meta">
+                            <h4>KTU S4 Examination</h4>
+                            <p class="achieve-date">June 2024 &nbsp;·&nbsp; AI &amp; Data Science, MESCE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achieve-card glass-card reveal">
+                    <div class="achieve-poster">
+                        <img src="real_ktu_s5.png" alt="KTU S5 Top Performers - Diya Fathima O">
+                        <div class="achieve-poster-overlay">
+                            <div class="sgpa-display"><span class="counter-scroll" data-target="8.59">0.00</span>
+                                <span>SGPA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achieve-header">
+                        <div class="achieve-badge"><i class="fas fa-trophy"></i></div>
+                        <div class="achieve-meta">
+                            <h4>KTU S5 Examination</h4>
+                            <p class="achieve-date">November 2024 &nbsp;·&nbsp; AI &amp; Data Science, MESCE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achieve-card glass-card reveal">
+                    <div class="achieve-poster">
+                        <img src="real_ktu_s6.png" alt="KTU S6 Top Performers - Diya Fathima O">
+                        <div class="achieve-poster-overlay">
+                            <div class="sgpa-display"><span class="counter-scroll" data-target="8.37">0.00</span>
+                                <span>SGPA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achieve-header">
+                        <div class="achieve-badge"><i class="fas fa-trophy"></i></div>
+                        <div class="achieve-meta">
+                            <h4>KTU S6 Examination</h4>
+                            <p class="achieve-date">April 2025 &nbsp;·&nbsp; AI &amp; Data Science, MESCE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achieve-card glass-card reveal">
+                    <div class="achieve-poster">
+                        <img src="real_ktu_s7.jpg" alt="KTU S7 Top Performers - Diya Fathima O">
+                        <div class="achieve-poster-overlay">
+                            <div class="sgpa-display"><span class="counter-scroll" data-target="9.37">0.00</span>
+                                <span>SGPA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achieve-header">
+                        <div class="achieve-badge"><i class="fas fa-trophy"></i></div>
+                        <div class="achieve-meta">
+                            <h4>KTU S7 Examination</h4>
+                            <p class="achieve-date">November 2025 &nbsp;·&nbsp; AI &amp; Data Science, MESCE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achieve-card glass-card reveal">
+                    <div class="achieve-poster">
+                        <img src="real_ktu_s8.jpg" alt="KTU S8 Top Performers - Diya Fathima O">
+                        <div class="achieve-poster-overlay">
+                            <div class="sgpa-display"><span class="counter-scroll" data-target="8.88">0.00</span>
+                                <span>SGPA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achieve-header">
+                        <div class="achieve-badge"><i class="fas fa-trophy"></i></div>
+                        <div class="achieve-meta">
+                            <h4>KTU S8 Examination</h4>
+                            <p class="achieve-date">April 2026 &nbsp;·&nbsp; AI &amp; Data Science, MESCE</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="achieve-banner glass-card reveal">
+                <i class="fas fa-award"></i>
+                <p>Consistently featured in ADTEC-MESCE's <strong>Top Performers Board</strong> for 5 consecutive
+                    semesters (S4 → S8), Department of AI & Data Science, MES College of Engineering, Kuttippuram.</p>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications section-padding">
+            <div class="section-header reveal-text">
+                <h2 class="section-title letters-reveal">Licenses &amp; <span
+                        class="gradient-text">Certifications</span></h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card glass-card reveal">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>IEEEXTREME</h3>
+                    <p>Participation & Excellence</p>
+                </div>
+                <div class="cert-card glass-card reveal">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <h3>Artificial Intelligence Internship</h3>
+                    <p>Completed AI Specialized Training</p>
+                </div>
+                <div class="cert-card glass-card reveal">
+                    <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Deloitte Australia Data Analytics</h3>
+                    <p>Job Simulation Completed</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="section-header reveal-text">
+                <h2 class="section-title letters-reveal" id="lets-connect">Let's <span
+                        class="gradient-text">Connect</span></h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="contact-container glass-card reveal">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p class="contact-quote">"Creativity powered by data can change the way people experience
+                        technology."</p>
+                    <div class="contact-methods">
+                        <a href="mailto:diyafathimaoruvil@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>diyafathimaoruvil@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/diya-fathima-a54348248/" target="_blank" rel="noopener"
+                            class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/diya-fathima</span>
+                        </a>
+                        <a href="https://diya-folio-glow.lovable.app/" target="_blank" rel="noopener"
+                            class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Marketing Portfolio ↗</span>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/diya-fathima-a54348248/" target="_blank" rel="noopener"
+                            class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://diya-folio-glow.lovable.app/" target="_blank" rel="noopener"
+                            class="social-icon" title="Marketing Portfolio"><i class="fas fa-globe"></i></a>
+                        <a href="mailto:diyafathimaoruvil@gmail.com" class="social-icon" title="Email"><i
+                                class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Send Message <i
+                            class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Diya Fathima O. All rights reserved.</p>
+            <p class="made-with">Designed with <i class="fas fa-heart"></i></p>
+        </div>
+    </footer>
+
+    <!-- Particles.js for AI Background Effects -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
