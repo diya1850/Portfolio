@@ -1724,9 +1724,11 @@ footer {
 
 .satellite-tag {
     position: absolute;
-    background: rgba(10, 15, 30, 0.85);
-    border: 1px solid var(--accent-secondary);
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3), inset 0 0 8px rgba(0, 229, 255, 0.05);
+    background: rgba(15, 15, 25, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(192, 132, 252, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.2), inset 0 0 10px rgba(192, 132, 252, 0.1);
     color: var(--text-primary);
     padding: 0.5rem 1.1rem;
     border-radius: 20px;
@@ -1738,7 +1740,7 @@ footer {
     align-items: center;
     gap: 6px;
     white-space: nowrap;
-    transition: box-shadow 0.3s ease, background 0.3s ease;
+    transition: box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .satellite-tag i {
@@ -1746,7 +1748,8 @@ footer {
 }
 
 .satellite-tag:hover {
-    background: rgba(123, 47, 255, 0.4);
+    background: rgba(123, 47, 255, 0.35);
+    border-color: var(--accent-secondary);
     box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
 }
 
@@ -3367,5 +3370,102 @@ footer {
 
 .light-mode .skills-hint {
     color: #9ca3af;
+}
+
+/* --- Satellite Orbit Tags (Light Mode) --- */
+.light-mode .satellite-tag {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(124, 58, 237, 0.25);
+    box-shadow: 0 4px 18px rgba(124, 58, 237, 0.12), inset 0 0 10px rgba(255, 255, 255, 0.8);
+    color: #1a1a2e;
+}
+
+.light-mode .satellite-tag i {
+    color: #7c3aed;
+}
+
+.light-mode .satellite-tag:hover {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #7c3aed;
+    box-shadow: 0 6px 24px rgba(124, 58, 237, 0.22);
+    color: #0a0a0f;
+}
+
+/* --- Contact Section (Light Mode) --- */
+.light-mode #contact {
+    background: linear-gradient(135deg, #fbfaff 0%, #f4f0ff 50%, #faf6ff 100%);
+    background-size: 200% 200%;
+    animation: gradientMeshLight 14s ease infinite;
+}
+
+@keyframes gradientMeshLight {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.light-mode #lets-connect {
+    animation: none;
+    color: #0a0a0f;
+    text-shadow: none;
+}
+
+.light-mode .contact-container {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    box-shadow: 0 20px 50px rgba(124, 58, 237, 0.08);
+}
+
+.light-mode .contact-info h3 {
+    color: #0a0a0f;
+}
+
+.light-mode .contact-quote {
+    color: #4b5563;
+    border-left-color: #7c3aed;
+}
+
+.light-mode .contact-item {
+    color: #1f2937;
+}
+
+.light-mode .contact-item:hover {
+    color: #7c3aed;
+}
+
+.light-mode .social-icon {
+    background: rgba(124, 58, 237, 0.08);
+    border: 1px solid rgba(124, 58, 237, 0.18);
+    color: #4b5563;
+}
+
+.light-mode .social-icon:hover {
+    background: #7c3aed;
+    color: #ffffff;
+    border-color: #7c3aed;
+}
+
+.light-mode .contact-form .form-group input,
+.light-mode .contact-form .form-group textarea {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    color: #111827;
+}
+
+.light-mode .contact-form .form-group input:focus,
+.light-mode .contact-form .form-group textarea:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.15);
+}
+
+.light-mode .contact-form .form-group input::placeholder,
+.light-mode .contact-form .form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.light-mode .flow-main-heading {
+    color: #0a0a0f;
 }
 
