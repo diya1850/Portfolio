@@ -1,21 +1,23 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Attach to Edge",
-            "port": 9222,
-            "request": "attach",
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch in Chrome",
+            "file": "${workspaceFolder}/index.html"
+        },
+        {
             "type": "msedge",
-            "webRoot": "${workspaceFolder}"
+            "request": "launch",
+            "name": "Launch in Edge",
+            "file": "${workspaceFolder}/index.html"
         },
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
+            "name": "Launch Chrome against localhost:8000",
+            "url": "http://localhost:8000",
             "webRoot": "${workspaceFolder}"
         }
     ]

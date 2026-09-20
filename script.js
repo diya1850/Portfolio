@@ -717,7 +717,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             } else if (node.nodeType === Node.ELEMENT_NODE) {
                 // Preserve gradient-text spans intact so the CSS background-clip gradient works
-                if (node.classList && node.classList.contains('gradient-text')) {
+                if (node.classList && (node.classList.contains('gradient-text') || node.classList.contains('flow-gradient-text'))) {
                     const clone = node.cloneNode(true);
                     clone.style.transitionDelay = `${delayCount * 0.015}s`;
                     delayCount += (clone.textContent || '').length;
@@ -922,6 +922,119 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             },
             "retina_detect": true
+        });
+    }
+
+    /* --- Experience Flow Role Switcher --- */
+    const roleItems = document.querySelectorAll('.flow-role-item');
+    const detailCards = document.querySelectorAll('.flow-detail-card');
+
+    if (roleItems.length && detailCards.length) {
+        roleItems.forEach(item => {
+            const switchRole = () => {
+                const targetRole = item.getAttribute('data-role');
+                const targetCard = document.getElementById(`detail-${targetRole}`);
+
+                if (!targetCard) return;
+
+                // Update items state
+                roleItems.forEach(r => {
+                    r.classList.remove('active');
+                    r.setAttribute('aria-selected', 'false');
+                });
+                item.classList.add('active');
+                item.setAttribute('aria-selected', 'true');
+
+                // Update cards state with smooth transition
+                detailCards.forEach(c => c.classList.remove('active'));
+                targetCard.classList.add('active');
+            };
+
+            item.addEventListener('click', switchRole);
+            item.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    switchRole();
+                }
+            });
+        });
+    }
+
+    /* --- Core Skills Proof & Tabs Handler --- */
+    const proofData = {
+        'digital-marketing': 'Driving GTM initiatives across Meta Ads, SEO, and B2B campaigns at SuperHippo.',
+        'meta-ads': '156.61% marketing ROI through Meta Ads, generating $1,996 in new ARR from 2 customer acquisitions.',
+        'seo': 'Achieved a Google Search Impact score of 200 through SEO optimisation and content strategy.',
+        'campaign-mgmt': 'Managed 5+ B2B Meta Ads campaigns to generate qualified leads and support pipeline growth.',
+        'content-creation': 'Recognised with the Quarterly R&R Award for Best LinkedIn Content within 2 months of joining.',
+        'communication': 'Delivered personalized career branding consultations and presented data findings clearly to stakeholders.',
+        'audience-targeting': 'Planned and executed ICP-based GTM campaigns targeting enterprise decision-makers.',
+        'marketing-automation': 'Built n8n automation workflows for AI-powered content generation and scheduled publishing.',
+        'ai-tools': 'Built and enriched a database of 200+ qualified B2B prospects using AI-powered prospecting tools.',
+        'data-analytics': 'Cleaned and analyzed datasets to extract meaningful insights and trends.',
+        'power-bi': 'Built interactive Power BI dashboards and reports to visualize business insights.',
+        'python': 'Used Python and relevant libraries for data analysis and stakeholder reporting.',
+        'excel': 'Comfortable structuring and maintaining data in Excel for analysis and reporting.'
+    };
+
+    const skillTabs = document.querySelectorAll('.skills-tab-btn');
+    const skillChips = document.querySelectorAll('.skill-chip');
+    const skillProof = document.getElementById('skill-proof');
+
+    function updateSkillProof(id) {
+        if (!skillProof || !proofData[id]) return;
+        skillProof.innerHTML = `
+            <p class="proof-skill">${id.replace(/-/g, ' ').toUpperCase()}</p>
+            <p class="proof-text">${proofData[id]}</p>
+        `;
+    }
+
+    if (skillTabs.length && skillChips.length) {
+        skillTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                skillTabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+
+                const filter = tab.dataset.filter;
+                let firstVisible = null;
+
+                skillChips.forEach(chip => {
+                    const cats = (chip.dataset.cat || '').split(' ');
+                    const isVisible = (filter === 'all' || cats.includes(filter));
+                    chip.classList.toggle('hidden', !isVisible);
+                    if (isVisible && !firstVisible) {
+                        firstVisible = chip;
+                    }
+                });
+
+                // If current active chip is now hidden, activate the first visible chip
+                const currentActive = document.querySelector('.skill-chip.active:not(.hidden)');
+                if (!currentActive && firstVisible) {
+                    skillChips.forEach(c => c.classList.remove('active'));
+                    firstVisible.classList.add('active');
+                    updateSkillProof(firstVisible.dataset.id);
+                }
+            });
+        });
+
+        skillChips.forEach(chip => {
+            const selectChip = () => {
+                skillChips.forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                updateSkillProof(chip.dataset.id);
+            };
+
+            chip.addEventListener('click', selectChip);
+            chip.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    selectChip();
+                }
+            });
         });
     }
 });
